@@ -28,11 +28,16 @@ public class MainMotor {
 
         System.out.println("==== Encender Motores ====");
         motor2.encender();
+        motor2.encender();
         motor1.mostrarEstado();
         motor2.mostrarEstado();
         motor3.mostrarEstado();
 
         System.out.println("\n=== Apagar Motores ===");
+        System.out.println("> Confirmando encendido de motor ...");
+        motor2.encender();
+        System.out.println("---------------------");
+        motor2.apagar();
         motor2.apagar();
         motor1.mostrarEstado();
         motor2.mostrarEstado();

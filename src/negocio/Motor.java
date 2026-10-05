@@ -8,8 +8,13 @@ public class Motor {
 
 
     public void encender(){
-        encendido=true;
-        System.out.println("[!] El " + nombre + " ha sido encendido.");
+        if(!encendido){
+            encendido=true;
+            System.out.println("[!] El " + nombre + " ha sido encendido.");
+        } else {
+            System.out.println("[!] El " + nombre + " ya ha sido encendido.");
+        }
+
     }
 
     public void mostrarInformacion(){
@@ -23,9 +28,14 @@ public class Motor {
     }
 
     void apagar(){
-        encendido = false;
-        velocidad = 0;
-        System.out.println("[!] El " + nombre + " fue apagado.");
+        if(encendido){
+            encendido = false;
+            velocidad = 0;
+            System.out.println("[!] El " + nombre + " fue apagado.");
+        } else {
+            System.out.println("[!] El " + nombre + " ya fue apagado.");
+        }
+
     }
 
     void mostrarEstado(){
